@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A fast, read-only frontend for make.fun bounties: live pots, deadlines, leaderboards and public profiles, straight from make.fun's public API.">
+<title>make.fun bounties — live board</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234de3c1'/%3E%3Ctext x='16' y='22' font-size='17' font-weight='bold' text-anchor='middle' font-family='sans-serif' fill='%230b0e14'%3Emf%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#/"><span class="brand-mark">make.fun</span><span class="brand-sub">bounty board</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#/" data-nav="board">Board</a>
+      <a href="#/closed" data-nav="closed">Closed</a>
+    </nav>
+    <label class="lookup">
+      <span class="lookup-label">Account</span>
+      <input id="lookup" type="search" placeholder="@handle — view a profile" aria-label="Look up a make.fun account by handle" autocomplete="off" spellcheck="false">
+    </label>
+  </div>
+</header>
+<main id="app" class="wrap" aria-live="polite"></main>
+<footer class="foot">
+  <div class="wrap">
+    <p>Unofficial frontend. Read-only: it only calls make.fun's public API (<code>https://make.fun/api</code>) — no sign-in, no writes, no tracking.</p>
+    <p><a href="https://make.fun/">make.fun</a> · <a href="https://make.fun/api/openapi.json">API docs</a> · All times UTC.</p>
+  </div>
+</footer>
+<noscript><p class="wrap">This board needs JavaScript to load live data from make.fun's public API.</p></noscript>
+</body>
+</html>
